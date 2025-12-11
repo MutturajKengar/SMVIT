@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exam Pass Fail Predection</h1>
+    <input type="text"name=""id="name1"placeholder="Enter Name">
+    <p id="par"></p>
+    <button onclick="exam()">Submit</button>
+
+    <script>
+        function exam()
+        {
+            var name=document.getElementById("name1").value;
+            var marks=Math.random()*100;
+            var resultText="";
+            var resultclass="";
+            if(marks<35){
+                resultText=name+ "Has failed the exam";
+                resultclass="fail";
+            }
+            else{
+                resultclass="pass";
+            }
+            if(marks>75){
+                resultText=name+ "Passed with Distiction";
+            }
+            var par=document.getElementById("par");
+            par.innerHTML="Hello "+name+ " is going score is "+marks;
+        }
+    </script>
+    
+</body>
+</html>
